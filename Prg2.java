@@ -97,10 +97,11 @@ class Inventory {
         Product[] selected = getArrayByChoice(choice);
         if (selected != null) {
             for (Product p : selected) {
-                System.out.println("ID: " + p.id + " | Name: " + p.name + " | Price: " + p.price);
+                System.out.println("ID: " + p.id + " | Name: " + p.name + "\nDescription: " + p.description + "\nPrice: " + p.price);
+                System.out.println("---------------------------");
             }
+           
         }
-        System.out.println("---------------------------");
     }
 
     public Product getProductById(int id) {
@@ -145,14 +146,16 @@ public class Prg2 {
                     if (p != null) myCart.addProduct(p);
                     else System.out.println("Product not found!");
                 }
-            } else if (option == 4) {
+            } 
+            else if (option == 4) {
                 myCart.showCartDetails();
                 System.out.println("Press 1 to Checkout (Empty Cart) or 2 to go Back: ");
                 if (input.readLine().equals("1")) {
                     System.out.println("Order Placed Successfully! Thank you for shopping.");
                     running = false;
                 }
-            } else {
+            } 
+            else {
                 running = false;
             }
         }
