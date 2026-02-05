@@ -1,5 +1,5 @@
 //Write a program to demonstrate various arithmetic calculations using packages. 
-import program3.arithmeticpack.Calculator;
+import arithmeticpack.Calculator;
 public class Prg3 {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
